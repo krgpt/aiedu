@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI EDU NEXUS — AI 초급→중급 8회 실전 과정</title>
+<meta name="description" content="AI 필수 용어부터 4대 LLM, Agent, Opencode·Egolite, 웹사이트 제작과 라이브 배포까지. 8회 동안 직접 만들고 세상에 공개하는 AI 실전 교육 과정.">
+<meta name="theme-color" content="#070a12">
+<meta property="og:title" content="AI EDU NEXUS — AI 초급→중급 8회 실전 과정">
+<meta property="og:description" content="AI를 이해하고, 일을 시키고, 직접 만들어 배포합니다. 8회 · 16시간 · 실습 70%.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23070a12'/%3E%3Cpath d='M18 44V20l14 11 14-11v24' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="AI EDU NEXUS 홈">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M6 24V8l10 8 10-8v16" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand-text">AI EDU <em>NEXUS</em></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="주요 메뉴">
+      <a href="#about" class="nav-link">과정 소개</a>
+      <a href="#curriculum" class="nav-link">8회 커리큘럼</a>
+      <a href="#knowledge" class="nav-link">AI 지식</a>
+      <a href="#outcomes" class="nav-link">수강 성과</a>
+      <a href="#guide" class="nav-link">수강 안내</a>
+      <a href="#contact" class="nav-link nav-cta-mobile">수강 문의</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="밝은 테마로 전환" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.2M12 19.3v2.2M21.5 12h-2.2M4.7 12H2.5M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6M18.7 18.7l-1.6-1.6M6.9 6.9L5.3 5.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 1 1 9.8 4a6.6 6.6 0 0 0 10.2 10.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="#contact" class="btn btn-sm btn-primary header-cta">수강 문의</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-orb orb-a" aria-hidden="true"></div>
+    <div class="hero-orb orb-b" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          AI 초급 → 중급 · 8회 실전 과정
+        </p>
+        <h1 class="reveal" id="heroTitle" data-delay="1">
+          AI를 이해하는 순간,<br>
+          <span class="grad-text">직접 만드는 힘</span>이 됩니다.
+        </h1>
+        <p class="hero-sub reveal" data-delay="2">
+          필수 용어부터 ChatGPT·Gemini·Claude·Grok, Agent, Opencode·Egolite까지.
+          8회 동안 AI에게 일을 시키고, 내 웹사이트와 앱을 만들어 인터넷에 공개합니다.
+        </p>
+        <div class="hero-actions reveal" data-delay="3">
+          <a href="#curriculum" class="btn btn-primary">
+            8회 커리큘럼 보기
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">수강 문의하기</a>
+        </div>
+
+        <dl class="hero-stats reveal" data-delay="4">
+          <div class="stat">
+            <dt>SESSION</dt>
+            <dd><span class="stat-num" data-count="8">8</span><span class="stat-unit">회</span></dd>
+          </div>
+          <div class="stat">
+            <dt>HOURS</dt>
+            <dd><span class="stat-num" data-count="24">24</span><span class="stat-unit">시간</span></dd>
+          </div>
+          <div class="stat">
+            <dt>PRACTICE</dt>
+            <dd><span class="stat-num" data-count="70">70</span><span class="stat-unit">%</span></dd>
+          </div>
+          <div class="stat">
+            <dt>LLMs</dt>
+            <dd><span class="stat-num" data-count="4">4</span><span class="stat-unit">대장</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-visual reveal" data-delay="3">
+        <div class="console">
+          <div class="console-bar">
+            <span class="console-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="console-title">ai-edu-nexus / 8-session-journey</span>
+            <span class="live-chip"><span aria-hidden="true"></span>LIVE</span>
+          </div>
+          <div class="console-body">
+            <div class="console-label">
+              <span>LEARNING PATH</span>
+              <span class="mono">01 → 08</span>
+            </div>
+            <ol class="journey">
+              <li style="--w:38%; --c:#38bdf8">
+                <span class="j-num">01</span><span class="j-name">AI의 언어</span><span class="j-tag">기초</span><span class="j-bar"><i></i></span>
+              </li>
+              <li style="--w:52%; --c:#38bdf8">
+                <span class="j-num">02</span><span class="j-name">자료 맡기기</span><span class="j-tag">기초</span><span class="j-bar"><i></i></span>
+              </li>
+              <li style="--w:46%; --c:#a78bfa">
+                <span class="j-num">03</span><span class="j-name">Agent</span><span class="j-tag">중급</span><span class="j-bar"><i></i></span>
+              </li>
+              <li style="--w:66%; --c:#a78bfa">
+                <span class="j-num">04</span><span class="j-name">Opencode · Egolite</span><span class="j-tag">중급</span><span class="j-bar"><i></i></span>
+              </li>
+              <li style="--w:76%; --c:#a78bfa">
+                <span class="j-num">05</span><span class="j-name">Opencode · Egolite</span><span class="j-tag">중급</span><span class="j-bar"><i></i></span>
+              </li>
+              <li style="--w:84%; --c:#fbbf24">
+                <span class="j-num">06</span><span class="j-name">웹사이트 제작</span><span class="j-tag">실전</span><span class="j-bar"><i></i></span>
+              </li>
+              <li style="--w:92%; --c:#fbbf24">
+                <span class="j-num">07</span><span class="j-name">온라인 런칭</span><span class="j-tag">실전</span><span class="j-bar"><i></i></span>
+              </li>
+              <li style="--w:100%; --c:#fbbf24">
+                <span class="j-num">08</span><span class="j-name">앱 제작 · 복습</span><span class="j-tag">실전</span><span class="j-bar"><i></i></span>
+              </li>
+            </ol>
+            <div class="console-foot">
+              <div>
+                <span class="mono console-foot-label">FINAL OUTPUT</span>
+                <strong>Live URL · GitHub · App</strong>
+              </div>
+              <span class="console-ver">v.2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="float-chip chip-1" aria-hidden="true">ChatGPT</div>
+        <div class="float-chip chip-2" aria-hidden="true">Gemini</div>
+        <div class="float-chip chip-3" aria-hidden="true">Claude</div>
+        <div class="float-chip chip-4" aria-hidden="true">Grok</div>
+        <div class="float-chip chip-5" aria-hidden="true">Vercel</div>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>ChatGPT</span><i>◆</i><span>Gemini</span><i>◆</i><span>Claude</span><i>◆</i><span>Grok</span><i>◆</i><span>Opencode</span><i>◆</i><span>Egolite</span><i>◆</i><span>GitHub</span><i>◆</i><span>Vercel</span><i>◆</i><span>Netlify</span><i>◆</i>
+        <span>ChatGPT</span><i>◆</i><span>Gemini</span><i>◆</i><span>Claude</span><i>◆</i><span>Grok</span><i>◆</i><span>Opencode</span><i>◆</i><span>Egolite</span><i>◆</i><span>GitHub</span><i>◆</i><span>Vercel</span><i>◆</i><span>Netlify</span><i>◆</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about" aria-labelledby="aboutTitle">
+    <div class="container about-grid">
+      <div class="section-head sticky-head">
+        <p class="section-label reveal"><span>01</span> ABOUT</p>
+        <h2 class="section-title reveal" id="aboutTitle" data-delay="1">
+          도구 사용법이 아니라,<br><span class="grad-text">일을 완성하는 흐름</span>을 배웁니다.
+        </h2>
+        <p class="section-desc reveal" data-delay="2">
+          AI를 처음 접하는 분도 8회가 끝나면 스스로 AI에게 업무를 맡기고,
+          결과물을 만들어 공개할 수 있도록 설계된 실습 중심 과정입니다.
+        </p>
+      </div>
+
+      <ol class="flow-list">
+        <li class="flow-item reveal">
+          <span class="flow-num">01</span>
+          <div class="flow-body">
+            <h3>이해한다 <span class="en">UNDERSTAND</span></h3>
+            <p>AI·LLM·프롬프트·Agent의 언어를 익히고, 시장의 4대 LLM을 같은 질문으로 비교하며 각 모델의 성격을 파악합니다.</p>
+            <div class="chip-row">
+              <span class="chip">생성형 AI</span><span class="chip">LLM</span><span class="chip">멀티모달</span>
+            </div>
+          </div>
+        </li>
+        <li class="flow-item reveal" data-delay="1">
+          <span class="flow-num">02</span>
+          <div class="flow-body">
+            <h3>일을 시킨다 <span class="en">DELEGATE</span></h3>
+            <p>파일과 자료를 맡기고, Agent의 작동 원리를 이해한 뒤 Opencode·Egolite로 실제 작업을 대신 수행하게 합니다.</p>
+            <div class="chip-row">
+              <span class="chip">파일 분석</span><span class="chip">Agent</span><span class="chip">MCP</span>
+            </div>
+          </div>
+        </li>
+        <li class="flow-item reveal" data-delay="2">
+          <span class="flow-num">03</span>
+          <div class="flow-body">
+            <h3>직접 만든다 <span class="en">BUILD</span></h3>
+            <p>AI에게 HTML/CSS/JavaScript를 지시해 웹사이트를 완성하고, GitHub·Vercel·Netlify로 실제 인터넷 주소에 배포합니다.</p>
+            <div class="chip-row">
+              <span class="chip">바이브 코딩</span><span class="chip">GitHub</span><span class="chip">Vercel</span>
+            </div>
+          </div>
+        </li>
+        <li class="flow-item reveal" data-delay="3">
+          <span class="flow-num">04</span>
+          <div class="flow-body">
+            <h3>세상에 공개한다 <span class="en">LAUNCH</span></h3>
+            <p>개인 Repository를 만들고 온라인 런칭을 경험합니다. 마지막 회차에는 앱 제작까지 도전하며 8회를 하나의 포트폴리오로 묶습니다.</p>
+            <div class="chip-row">
+              <span class="chip">Repository</span><span class="chip">Live URL</span><span class="chip">App</span>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section class="section section-alt" id="curriculum" aria-labelledby="curriculumTitle">
+    <div class="container">
+      <div class="section-head split-head">
+        <div>
+          <p class="section-label reveal"><span>02</span> CURRICULUM</p>
+          <h2 class="section-title reveal" id="curriculumTitle" data-delay="1">
+            8회, <span class="grad-text">결과물이 쌓이는</span> 커리큘럼
+          </h2>
+        </div>
+        <div class="head-side reveal" data-delay="2">
+          <p>기초에서 실전까지 난이도가 자연스럽게 올라갑니다. 각 회차는 2시간 기준이며, 강의 30% · 실습 70%로 진행됩니다.</p>
+          <div class="stage-legend" aria-label="난이도 구간">
+            <span class="legend-item basic"><i></i>기초 1–2회</span>
+            <span class="legend-item mid"><i></i>중급 3–5회</span>
+            <span class="legend-item real"><i></i>실전 6–8회</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="curriculum-toolbar reveal">
+        <span class="toolbar-hint">회차를 클릭하면 상세 내용이 열립니다.</span>
+        <button class="text-btn" id="toggleAll" type="button" aria-expanded="false">전체 펼치기</button>
+      </div>
+
+      <div class="session-list" id="sessionList">
+        <details class="session basic" open>
+          <summary>
+            <span class="s-no">01</span>
+            <span class="s-main">
+              <span class="s-kicker">SESSION 01 · 기초</span>
+              <span class="s-title">AI의 언어 익히기</span>
+            </span>
+            <span class="s-meta">결과물 · 나에게 맞는 AI 도구 지도</span>
+            <span class="s-toggle" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="s-body">
+            <p class="s-desc">AI를 처음 접하는 사람이 AI 생태계의 전체 구조를 이해하도록, 필수 용어와 4대 LLM을 한 번에 정리합니다. 수학이나 프로그래밍은 최소화합니다.</p>
+            <ul class="check-list">
+              <li>AI 필수 용어 숙지 및 개념 정립 — AI, 머신러닝, 딥러닝, 생성형 AI, LLM, 멀티모달, Agent, AGI</li>
+              <li>시장의 4대장 <strong>ChatGPT · Gemini · Claude · Grok</strong> 실습 체험 및 각각의 특성 파악</li>
+              <li>무료 수준의 모든 기능 실습</li>
+              <li>각 4개 LLM에게 동일한 질문을 던지며 답변하는 형태 분석</li>
+              <li>프롬프트를 어떤 방식으로 넣는가에 따른 답변 흐름 분석</li>
+              <li>이미 가입한 모델이 있다면 그것을 중심으로, 없다면 <strong>Gemini 중심</strong>으로 진행</li>
+            </ul>
+            <div class="s-foot">
+              <div class="chip-row">
+                <span class="chip">생성형 AI</span><span class="chip">LLM</span><span class="chip">프롬프트</span><span class="chip">멀티모달</span>
+              </div>
+              <p class="outcome-pill"><span>OUTPUT</span> 나에게 맞는 AI 도구 지도</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="session basic">
+          <summary>
+            <span class="s-no">02</span>
+            <span class="s-main">
+              <span class="s-kicker">SESSION 02 · 기초</span>
+              <span class="s-title">자료를 맡기는 법</span>
+            </span>
+            <span class="s-meta">결과물 · 내 자료 분석 워크플로</span>
+            <span class="s-toggle" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="s-body">
+            <p class="s-desc">질문만 던지는 단계에서 한 걸음 나아가, 내가 가진 파일과 텍스트를 AI가 읽고 처리하게 합니다. 무료 한도의 경계와 현실적인 우회 방법도 함께 익힙니다.</p>
+            <ul class="check-list">
+              <li>파일 업로드 분석, 텍스트 업로드 분석 실습</li>
+              <li>LLM이 무료 이용 한도 안에서 일 처리를 어디까지 하는지 직접 확인</li>
+              <li>LLM이 요구한 작업 중 사용자 PC에서 구현할 수 없는 것들을 어떤 방법으로 가능하게 하는지 실습</li>
+              <li>문서·이미지·표 등 다양한 형태의 자료를 AI에게 맡기는 흐름 정리</li>
+            </ul>
+            <div class="s-foot">
+              <div class="chip-row">
+                <span class="chip">파일 분석</span><span class="chip">컨텍스트</span><span class="chip">무료 한도</span><span class="chip">RAG</span>
+              </div>
+              <p class="outcome-pill"><span>OUTPUT</span> 내 자료 분석 워크플로</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="session mid">
+          <summary>
+            <span class="s-no">03</span>
+            <span class="s-main">
+              <span class="s-kicker">SESSION 03 · 중급</span>
+              <span class="s-title">Agent를 이해하고 사용하기</span>
+            </span>
+            <span class="s-meta">결과물 · 첫 Agent 실행 경험</span>
+            <span class="s-toggle" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="s-body">
+            <p class="s-desc">챗봇과 Agent의 결정적인 차이를 이해합니다. 목표를 받으면 스스로 계획하고, 도구를 사용하고, 결과를 검증하는 루프를 직접 경험합니다.</p>
+            <ul class="check-list">
+              <li>Agent의 개념 학습 — 목표 수신 → 맥락 수집 → 도구 실행 → 결과 검증 → 반복·보고</li>
+              <li>Tool, Memory, Planning, Tool Calling의 역할 이해</li>
+              <li>Agent 사용 실습</li>
+              <li>사람이 통제해야 할 지점 — 목표 설정, 권한 부여, 중요 행동 승인, 결과 검토</li>
+            </ul>
+            <div class="s-foot">
+              <div class="chip-row">
+                <span class="chip">Agent</span><span class="chip">Tool</span><span class="chip">Planning</span><span class="chip">MCP</span>
+              </div>
+              <p class="outcome-pill"><span>OUTPUT</span> 첫 Agent 실행 경험</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="session mid">
+          <summary>
+            <span class="s-no">04</span>
+            <span class="s-main">
+              <span class="s-kicker">SESSION 04 · 중급</span>
+              <span class="s-title">Opencode · Egolite 입문</span>
+            </span>
+            <span class="s-meta">결과물 · 도구에 작업을 맡긴 경험</span>
+            <span class="s-toggle" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="s-body">
+            <p class="s-desc">실제 작업 환경에서 AI 도구를 직접 다룹니다. 4·5회차에 걸쳐 같은 도구를 반복 실습하며 명령하고 확인하는 감각을 익힙니다.</p>
+            <ul class="check-list">
+              <li>Opencode 사용 실습</li>
+              <li>Egolite 사용 실습</li>
+              <li>도구에게 작업을 지시하고, 결과를 확인하고, 다시 수정을 요청하는 흐름 연습</li>
+              <li>AI가 낸 결과를 그대로 받아들이지 않고 검증하는 습관 만들기</li>
+            </ul>
+            <div class="s-foot">
+              <div class="chip-row">
+                <span class="chip">Opencode</span><span class="chip">Egolite</span><span class="chip">작업 지시</span><span class="chip">검증</span>
+              </div>
+              <p class="outcome-pill"><span>OUTPUT</span> 도구에 작업을 맡긴 경험</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="session mid">
+          <summary>
+            <span class="s-no">05</span>
+            <span class="s-main">
+              <span class="s-kicker">SESSION 05 · 중급</span>
+              <span class="s-title">Opencode · Egolite 심화</span>
+            </span>
+            <span class="s-meta">결과물 · 반복 가능한 작업 흐름</span>
+            <span class="s-toggle" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="s-body">
+            <p class="s-desc">입문에서 끝나지 않고, 더 복잡한 요청을 단계별로 나누어 맡깁니다. 도구 사용을 반복하면서 나만의 작업 순서를 만듭니다.</p>
+            <ul class="check-list">
+              <li>Opencode 사용 실습 — 요청을 작업 단위로 나누어 전달하기</li>
+              <li>Egolite 사용 실습 — 결과를 비교하고 개선 요청하기</li>
+              <li>한 번의 지시로 끝내지 않고, 계획 → 실행 → 검토 → 수정의 사이클 연습</li>
+              <li>6회차 웹사이트 제작을 위한 작업 환경 정리</li>
+            </ul>
+            <div class="s-foot">
+              <div class="chip-row">
+                <span class="chip">워크플로</span><span class="chip">반복 실습</span><span class="chip">개선 요청</span><span class="chip">자동화</span>
+              </div>
+              <p class="outcome-pill"><span>OUTPUT</span> 반복 가능한 작업 흐름</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="session real">
+          <summary>
+            <span class="s-no">06</span>
+            <span class="s-main">
+              <span class="s-kicker">SESSION 06 · 실전</span>
+              <span class="s-title">웹사이트 제작 실습</span>
+            </span>
+            <span class="s-meta">결과물 · 라이브 웹사이트 1개</span>
+            <span class="s-toggle" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="s-body">
+            <p class="s-desc">코딩 문법을 외우는 대신, AI에게 화면의 구조와 동작을 설명하는 방법을 배웁니다. 결과물은 실제 인터넷 주소로 배포합니다.</p>
+            <ul class="check-list">
+              <li>HTML/CSS/JavaScript 구조를 AI에게 지시하는 프롬프트 작성법</li>
+              <li>GitHub 레포지토리 연동 및 Vercel · Netlify 1클릭 배포</li>
+              <li><strong>실습 과제:</strong> AI와 대화하며 포트폴리오 또는 랜딩페이지 1개 완성</li>
+              <li>실제 인터넷 URL 라이브 배포</li>
+            </ul>
+            <div class="s-foot">
+              <div class="chip-row">
+                <span class="chip">HTML/CSS/JS</span><span class="chip">바이브 코딩</span><span class="chip">GitHub</span><span class="chip">Vercel</span><span class="chip">Netlify</span>
+              </div>
+              <p class="outcome-pill"><span>OUTPUT</span> 라이브 웹사이트 1개</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="session real">
+          <summary>
+            <span class="s-no">07</span>
+            <span class="s-main">
+              <span class="s-kicker">SESSION 07 · 실전</span>
+              <span class="s-title">온라인 런칭</span>
+            </span>
+            <span class="s-meta">결과물 · 내 이름의 라이브 URL</span>
+            <span class="s-toggle" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="s-body">
+            <p class="s-desc">만든 사이트를 세상에 공개합니다. GitHub 계정과 개인 Repository를 직접 만들며, 앞으로도 스스로 업데이트할 수 있는 기반을 갖춥니다.</p>
+            <ul class="check-list">
+              <li>제작된 웹사이트 온라인 런칭</li>
+              <li>GitHub 사이트 계정 만들기</li>
+              <li>개인 Repository 생성</li>
+              <li>배포 주소 점검 및 공개 — 내 작업을 남에게 보여줄 수 있는 링크 확보</li>
+            </ul>
+            <div class="s-foot">
+              <div class="chip-row">
+                <span class="chip">GitHub</span><span class="chip">Repository</span><span class="chip">배포</span><span class="chip">런칭</span>
+              </div>
+              <p class="outcome-pill"><span>OUTPUT</span> 내 이름의 라이브 URL</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="session real">
+          <summary>
+            <span class="s-no">08</span>
+            <span class="s-main">
+              <span class="s-kicker">SESSION 08 · 실전</span>
+              <span class="s-title">앱 제작 실습과 전체 복습</span>
+            </span>
+            <span class="s-meta">결과물 · 나만의 앱 + 8회 포트폴리오</span>
+            <span class="s-toggle" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="s-body">
+            <p class="s-desc">마지막 회차는 앞의 모든 내용을 하나로 합칩니다. 앱 제작을 실습하고, 8회 동안 배운 개념과 도구를 다시 연결합니다.</p>
+            <ul class="check-list">
+              <li>앱 제작 실습</li>
+              <li>전체 복습 — AI 개념, 4대 LLM, 파일 분석, Agent, Opencode·Egolite, 웹 제작과 배포</li>
+              <li>내 결과물 점검 및 다음 단계 계획 세우기</li>
+              <li>8회 동안 만든 웹사이트 · Repository · 앱을 하나의 포트폴리오로 정리</li>
+            </ul>
+            <div class="s-foot">
+              <div class="chip-row">
+                <span class="chip">앱 제작</span><span class="chip">프로젝트</span><span class="chip">복습</span><span class="chip">포트폴리오</span>
+              </div>
+              <p class="outcome-pill"><span>OUTPUT</span> 나만의 앱 + 8회 포트폴리오</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- KNOWLEDGE -->
+  <section class="section" id="knowledge" aria-labelledby="knowledgeTitle">
+    <div class="container">
+      <div class="section-head split-head">
+        <div>
+          <p class="section-label reveal"><span>03</span> KNOWLEDGE BASE</p>
+          <h2 class="section-title reveal" id="knowledgeTitle" data-delay="1">
+            수업에서 만나는 <span class="grad-text">AI 지식</span>
+          </h2>
+        </div>
+        <div class="head-side reveal" data-delay="2">
+          <p>4대 LLM의 특성, Agent의 구조, AI 인체구조, 필수 용어를 미리 살펴보세요. 수업 자료를 바탕으로 정리한 참고 지식입니다.</p>
+        </div>
+      </div>
+
+      <div class="tabs reveal" role="tablist" aria-label="AI 지식 주제">
+        <button class="tab active" role="tab" id="tab-models" aria-selected="true" aria-controls="panel-models" data-tab="models">LLM 4대장</button>
+        <button class="tab" role="tab" id="tab-agent" aria-selected="false" aria-controls="panel-agent" data-tab="agent" tabindex="-1">Agent 생태계</button>
+        <button class="tab" role="tab" id="tab-anatomy" aria-selected="false" aria-controls="panel-anatomy" data-tab="anatomy" tabindex="-1">AI 인체구조</button>
+        <button class="tab" role="tab" id="tab-glossary" aria-selected="false" aria-controls="panel-glossary" data-tab="glossary" tabindex="-1">용어사전</button>
+      </div>
+
+      <div class="tab-panels reveal" data-delay="1">
+        <!-- MODELS -->
+        <div class="tab-panel active" id="panel-models" role="tabpanel" aria-labelledby="tab-models">
+          <div class="model-grid">
+            <article class="model-card" style="--brand:#10a37f">
+              <div class="model-top">
+                <span class="model-logo">GPT</span>
+                <span class="model-company">OpenAI</span>
+              </div>
+              <h3>ChatGPT</h3>
+              <p class="model-role">균형 잡힌 올라운더</p>
+              <p class="model-desc">글쓰기, 기획, 코드, 이미지까지 폭넓게 다루는 범용 모델. 처음 AI를 시작할 때 기준점으로 삼기 좋습니다.</p>
+              <dl class="model-meta">
+                <div><dt>강점</dt><dd>범용성 · 생태계 · 다양한 플러그인</dd></div>
+                <div><dt>이런 때</dt><dd>기획서, 글쓰기, 코드 초안</dd></div>
+              </dl>
+            </article>
+            <article class="model-card" style="--brand:#4285f4">
+              <div class="model-top">
+                <span class="model-logo">G</span>
+                <span class="model-company">Google</span>
+              </div>
+              <h3>Gemini</h3>
+              <p class="model-role">구글 생태계 · 멀티모달</p>
+              <p class="model-desc">유튜브·문서·지도 등 구글 서비스와 연결되며, 텍스트·이미지·음성을 함께 처리하는 데 강합니다.</p>
+              <dl class="model-meta">
+                <div><dt>강점</dt><dd>멀티모달 · 구글 연동 · 긴 문맥</dd></div>
+                <div><dt>이런 때</dt><dd>자료 조사, 이미지·영상 이해</dd></div>
+              </dl>
+            </article>
+            <article class="model-card" style="--brand:#d97757">
+              <div class="model-top">
+                <span class="model-logo">C</span>
+                <span class="model-company">Anthropic</span>
+              </div>
+              <h3>Claude</h3>
+              <p class="model-role">긴 문서 · 코딩 · 기획</p>
+              <p class="model-desc">긴 문맥을 안정적으로 이해하고 차분한 문체를 유지합니다. 문서 분석과 코드 작업에서 특히 신뢰도가 높습니다.</p>
+              <dl class="model-meta">
+                <div><dt>강점</dt><dd>긴 문맥 · 문서 이해 · 코드 품질</dd></div>
+                <div><dt>이런 때</dt><dd>PDF 분석, 기획문서, 리팩토링</dd></div>
+              </dl>
+            </article>
+            <article class="model-card" style="--brand:#94a3b8">
+              <div class="model-top">
+                <span class="model-logo">X</span>
+                <span class="model-company">xAI</span>
+              </div>
+              <h3>Grok</h3>
+              <p class="model-role">실시간 · X 데이터</p>
+              <p class="model-desc">X(구 트위터)의 실시간 흐름과 연결되어, 지금 벌어지는 이슈와 트렌드를 파악하는 데 특화되어 있습니다.</p>
+              <dl class="model-meta">
+                <div><dt>강점</dt><dd>실시간성 · 자율 분석 · 위트</dd></div>
+                <div><dt>이런 때</dt><dd>트렌드 파악, 실시간 이슈</dd></div>
+              </dl>
+            </article>
+          </div>
+          <div class="info-banner">
+            <span class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 8v5M12 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+            <p><strong>수업은 무료 범위에서 진행됩니다.</strong> 이미 가입한 모델이 있다면 그것을 중심으로, 특별히 등록한 LLM이 없다면 Gemini를 중심으로 실습합니다.</p>
+          </div>
+        </div>
+
+        <!-- AGENT -->
+        <div class="tab-panel" id="panel-agent" role="tabpanel" aria-labelledby="tab-agent" hidden>
+          <div class="agent-compare">
+            <div class="compare-card">
+              <span class="compare-tag">CHATBOT</span>
+              <h3>질문하고, 답을 받는다</h3>
+              <p class="compare-flow"><span>나</span><i>→</i><span>질문</span><i>→</i><span>AI</span><i>→</i><span>답변</span></p>
+              <p class="compare-desc">답변은 텍스트로 받고, 실제 실행은 사람이 합니다.</p>
+            </div>
+            <div class="compare-card is-agent">
+              <span class="compare-tag">AGENT</span>
+              <h3>목표를 주면, 스스로 완료한다</h3>
+              <p class="compare-flow"><span>나</span><i>→</i><span>목표</span><i>→</i><span>AI</span><i>→</i><span>계획·도구·검증</span><i>→</i><span>완료</span></p>
+              <p class="compare-desc">도구를 사용해 실행하고, 결과를 확인한 뒤 스스로 반복합니다.</p>
+            </div>
+          </div>
+
+          <div class="agent-loop">
+            <div class="subhead">
+              <h3>Agent Loop</h3>
+              <p>챗봇과 에이전트를 가르는 지점은 <strong>검증 후 스스로 반복</strong>하는가입니다.</p>
+            </div>
+            <ol class="loop-steps">
+              <li><span>01</span>목표 수신</li>
+              <li><span>02</span>맥락 수집</li>
+              <li><span>03</span>도구 실행</li>
+              <li><span>04</span>결과 검증</li>
+              <li><span>05</span>반복 · 보고</li>
+            </ol>
+          </div>
+
+          <div class="layer-grid">
+            <article class="layer-card">
+              <span class="layer-no">01</span>
+              <h4>모델 <span>LLM</span></h4>
+              <p>생각하는 두뇌. Claude, GPT, Gemini, LLaMA, Qwen 등.</p>
+            </article>
+            <article class="layer-card">
+              <span class="layer-no">02</span>
+              <h4>실행 환경 <span>ENGINE</span></h4>
+              <p>모델을 돌리는 엔진. Ollama 같은 로컬 런타임 또는 클라우드 API.</p>
+            </article>
+            <article class="layer-card">
+              <span class="layer-no">03</span>
+              <h4>하네스 <span>HARNESS</span></h4>
+              <p>모델에 손발을 주는 실행틀. 도구 호출·권한·루프를 관리합니다.</p>
+            </article>
+            <article class="layer-card">
+              <span class="layer-no">04</span>
+              <h4>접점 <span>CHANNEL</span></h4>
+              <p>사람이 만나는 창구. 터미널, IDE, 메신저 등.</p>
+            </article>
+          </div>
+
+          <div class="agent-extras">
+            <div class="extra-card"><span class="mono">MCP</span><p>AI가 외부 도구·데이터에 연결하는 공통 표준. 도구마다 개별 연동을 만들지 않아도 됩니다.</p></div>
+            <div class="extra-card"><span class="mono">SKILL</span><p>경험에서 만들어 재사용하는 절차 문서. 반복 작업을 빠르고 일관되게 처리합니다.</p></div>
+            <div class="extra-card"><span class="mono">AGENTS.md</span><p>프로젝트 루트에 두는 지침 파일. 에이전트가 작업 공간을 다루는 방법을 알려줍니다.</p></div>
+          </div>
+          <p class="panel-note">4·5회차에서는 Opencode와 Egolite를 직접 실습하며, 이 구조가 실제 작업에서 어떻게 작동하는지 경험합니다.</p>
+        </div>
+
+        <!-- ANATOMY -->
+        <div class="tab-panel" id="panel-anatomy" role="tabpanel" aria-labelledby="tab-anatomy" hidden>
+          <p class="anatomy-summary"><strong>[ 해골 ]</strong> 안에서 <strong>[ 뇌 ]</strong>가 생각하고, <strong>[ 손발 ]</strong>이 움직여 실제 일을 완성합니다.</p>
+          <div class="anatomy-grid">
+            <article class="anatomy-card brain">
+              <span class="anatomy-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M12 6a5 5 0 0 0-5 5 4 4 0 0 0-1 7.5A4.5 4.5 0 0 0 12 25V6ZM20 6a5 5 0 0 1 5 5 4 4 0 0 1 1 7.5A4.5 4.5 0 0 1 20 25V6Z" stroke="currentColor" stroke-width="1.5"/><path d="M12 11h8M12 16h8M12 21h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+              <span class="anatomy-label">01 / BRAIN</span>
+              <h3>뇌 <span>모델</span></h3>
+              <p>지능과 사고를 담당하는 AI 모델. 판단하고 추론하며 답을 만드는 핵심 알고리즘입니다.</p>
+              <ul class="mini-list">
+                <li>GPT · Claude · Gemini · Grok</li>
+                <li>Llama · Qwen · DeepSeek · Gemma</li>
+                <li>Codex · StarCoder 등 특화 모델</li>
+              </ul>
+            </article>
+            <article class="anatomy-card skull">
+              <span class="anatomy-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C9.4 4 5 8.4 5 14c0 3.6 1.7 5.8 3 7.2V26h16v-4.8c1.3-1.4 3-3.6 3-7.2 0-5.6-4.4-10-11-10Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="14" r="1.6" fill="currentColor"/><circle cx="20" cy="14" r="1.6" fill="currentColor"/></svg>
+              </span>
+              <span class="anatomy-label">02 / SKULL</span>
+              <h3>해골 <span>플랫폼 · 런타임</span></h3>
+              <p>뇌를 담고 보호하며, 사용자가 접할 수 있도록 감싸는 외피. 인프라와 인터페이스입니다.</p>
+              <ul class="mini-list">
+                <li>ChatGPT · Gemini · Claude.ai</li>
+                <li>Ollama · LM Studio · vLLM</li>
+                <li>Telegram · Discord · Slack Bot</li>
+              </ul>
+            </article>
+            <article class="anatomy-card hands">
+              <span class="anatomy-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M11 15V8.5a2 2 0 1 1 4 0V14M15 13V6.5a2 2 0 1 1 4 0V14M19 14V8a2 2 0 1 1 4 0v9M11 15v-2.5a2 2 0 1 0-4 0V19c0 5 4 9 9 9h2c4 0 7-3 7-7v-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="anatomy-label">03 / HANDS &amp; FEET</span>
+              <h3>손과 발 <span>에이전트 · 도구</span></h3>
+              <p>뇌의 명령을 받아 파일을 열고, 터미널을 실행하고, 코드를 수정하는 실제 행동 도구입니다.</p>
+              <ul class="mini-list">
+                <li>Opencode · Claude Code · Codex</li>
+                <li>Cursor · GitHub Copilot · Antigravity</li>
+                <li>OpenClaw · Operator · n8n</li>
+              </ul>
+            </article>
+          </div>
+          <p class="panel-note">출처: 「AI 인체구조」, 「AI 에이전트 전반 개념」 자료를 바탕으로 재구성했습니다.</p>
+        </div>
+
+        <!-- GLOSSARY -->
+        <div class="tab-panel" id="panel-glossary" role="tabpanel" aria-labelledby="tab-glossary" hidden>
+          <div class="glossary-toolbar">
+            <div class="search-box">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="m13.2 13.2 3.3 3.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <input type="search" id="glossarySearch" placeholder="용어를 검색해 보세요 (예: RAG, Agent)" aria-label="용어 검색">
+            </div>
+            <div class="filter-row" role="group" aria-label="용어 난이도 필터">
+              <button class="filter-btn active" data-filter="all" type="button">전체</button>
+              <button class="filter-btn" data-filter="basic" type="button">기초</button>
+              <button class="filter-btn" data-filter="advanced" type="button">활용</button>
+              <button class="filter-btn" data-filter="deep" type="button">심화</button>
+            </div>
+          </div>
+          <p class="glossary-count" id="glossaryCount"></p>
+          <div class="glossary-grid" id="glossaryGrid"></div>
+          <p class="empty-state" id="glossaryEmpty" hidden>검색 결과가 없습니다. 다른 키워드로 시도해 보세요.</p>
+          <p class="panel-note">「01_생성형AI필수용어」, 「AI단어집」 자료를 바탕으로 수업에 필요한 핵심 용어를 정리했습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section class="section section-alt" id="outcomes" aria-labelledby="outcomesTitle">
+    <div class="container">
+      <div class="section-head split-head">
+        <div>
+          <p class="section-label reveal"><span>04</span> OUTCOMES</p>
+          <h2 class="section-title reveal" id="outcomesTitle" data-delay="1">
+            8회가 끝나면,<br><span class="grad-text">손에 남는 것</span>
+          </h2>
+        </div>
+        <div class="head-side reveal" data-delay="2">
+          <p>수료 후에는 설명할 수 있는 개념이 아니라, 링크로 보여줄 수 있는 결과물이 남습니다.</p>
+        </div>
+      </div>
+
+      <div class="outcome-grid">
+        <article class="outcome-card reveal">
+          <span class="outcome-no" aria-hidden="true">01</span>
+          <span class="outcome-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="15" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 8h18M7 6.2h.01M9.6 6.2h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+          <h3>라이브 웹사이트</h3>
+          <p>AI와 대화해 만든 포트폴리오 또는 랜딩페이지가 실제 URL로 인터넷에 공개됩니다.</p>
+          <span class="outcome-tag">Live URL</span>
+        </article>
+        <article class="outcome-card reveal" data-delay="1">
+          <span class="outcome-no" aria-hidden="true">02</span>
+          <span class="outcome-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 19c-4 1.2-4-2.2-5.5-2.8M15 21v-3.4c0-1 .1-1.4-.5-2 2.4-.3 4.8-1.2 4.8-5.2a4 4 0 0 0-1.1-2.8 3.7 3.7 0 0 0-.1-2.8s-.9-.3-3 1.1a10.3 10.3 0 0 0-5.4 0C7.6 3.5 6.7 3.8 6.7 3.8a3.7 3.7 0 0 0-.1 2.8 4 4 0 0 0-1.1 2.9c0 3.9 2.4 4.8 4.8 5.1-.4.4-.6.9-.6 1.5V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>GitHub Repository</h3>
+          <p>내 계정에 개인 Repository가 만들어지고, 만든 사이트의 코드와 이력이 쌓입니다.</p>
+          <span class="outcome-tag">My Repository</span>
+        </article>
+        <article class="outcome-card reveal" data-delay="2">
+          <span class="outcome-no" aria-hidden="true">03</span>
+          <span class="outcome-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+          <h3>나만의 앱</h3>
+          <p>마지막 회차의 앱 제작 실습으로 웹을 넘어 앱까지 경험합니다.</p>
+          <span class="outcome-tag">App Practice</span>
+        </article>
+        <article class="outcome-card reveal" data-delay="3">
+          <span class="outcome-no" aria-hidden="true">04</span>
+          <span class="outcome-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </span>
+          <h3>AI 활용력</h3>
+          <p>4대 LLM, 파일 분석, Agent, Opencode·Egolite를 상황에 맞게 골라 쓸 수 있습니다.</p>
+          <span class="outcome-tag">AI Literacy</span>
+        </article>
+      </div>
+
+      <div class="ability-panel reveal">
+        <div class="ability-head">
+          <p class="section-label"><span>+</span> AFTER 8 SESSIONS</p>
+          <h3>이 8가지를 할 수 있으면, 과정은 성공입니다.</h3>
+        </div>
+        <ul class="ability-list">
+          <li><span>01</span>AI의 기본 개념을 설명할 수 있다.</li>
+          <li><span>02</span>ChatGPT·Claude·Gemini·Grok의 특징과 용도를 비교한다.</li>
+          <li><span>03</span>원하는 결과를 얻기 위한 업무 지시를 할 수 있다.</li>
+          <li><span>04</span>PDF·문서·텍스트 자료를 AI에게 분석시킬 수 있다.</li>
+          <li><span>05</span>Agent와 MCP의 기본 개념을 이해한다.</li>
+          <li><span>06</span>Opencode·Egolite로 작업을 대신 수행하게 할 수 있다.</li>
+          <li><span>07</span>AI와 함께 웹사이트를 만들고 배포할 수 있다.</li>
+          <li><span>08</span>앱 제작까지 경험하고 다음 프로젝트를 계획할 수 있다.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section class="section" id="guide" aria-labelledby="guideTitle">
+    <div class="container">
+      <div class="section-head split-head">
+        <div>
+          <p class="section-label reveal"><span>05</span> CLASS GUIDE</p>
+          <h2 class="section-title reveal" id="guideTitle" data-delay="1">
+            수업은 이렇게 <span class="grad-text">진행됩니다</span>
+          </h2>
+        </div>
+        <div class="head-side reveal" data-delay="2">
+          <p>회당 2시간, 총 16시간. 설명을 듣는 시간보다 직접 AI에게 일을 시켜보는 시간이 훨씬 많습니다.</p>
+        </div>
+      </div>
+
+      <div class="format-grid">
+        <div class="practice-card reveal">
+          <div class="donut" style="--p:70">
+            <div class="donut-center">
+              <strong>70<span>%</span></strong>
+              <span>HANDS-ON</span>
+            </div>
+          </div>
+          <div class="practice-copy">
+            <h3>강의 30 · 실습 70</h3>
+            <p>AI 교육은 설명을 많이 듣는다고 실력이 생기기보다, 직접 시켜보고 결과를 수정해보는 경험이 훨씬 중요합니다.</p>
+          </div>
+        </div>
+
+        <div class="time-card reveal" data-delay="1">
+          <div class="time-head">
+            <h3>2시간 수업 구성</h3>
+            <span class="mono">180 MIN</span>
+          </div>
+          <ul class="time-list">
+            <li style="--w:22%"><span>개념 설명</span><i></i><em>40분</em></li>
+            <li style="--w:17%"><span>강사 시연</span><i></i><em>30분</em></li>
+            <li style="--w:22%"><span>따라하기</span><i></i><em>40분</em></li>
+            <li style="--w:28%"><span>개인 실습</span><i></i><em>50분</em></li>
+            <li style="--w:11%"><span>공유 · 질문</span><i></i><em>20분</em></li>
+          </ul>
+          <p class="time-note">회차별 주제와 난이도에 따라 비율은 조정될 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="guide-grid">
+        <article class="guide-card reveal">
+          <span class="guide-label">FOR WHOM</span>
+          <h3>이런 분께 추천합니다</h3>
+          <ul class="dot-list">
+            <li>AI를 처음 접하고, 어디서부터 시작해야 할지 모르는 분</li>
+            <li>업무에 AI를 활용하고 싶지만 결과물로 이어지지 않았던 분</li>
+            <li>코딩 경험 없이 내 웹사이트를 만들어 공개하고 싶은 분</li>
+            <li>Agent·바이브 코딩 같은 최신 흐름을 직접 경험하고 싶은 분</li>
+          </ul>
+        </article>
+        <article class="guide-card reveal" data-delay="1">
+          <span class="guide-label">PREPARE</span>
+          <h3>사전 준비물</h3>
+          <ul class="dot-list">
+            <li>노트북 — Windows 10 이상 또는 macOS</li>
+            <li>Chrome 브라우저 설치</li>
+            <li>Google 계정 (Gemini 실습용)</li>
+            <li>GitHub 계정 — 7회차 전까지 만들면 충분합니다</li>
+          </ul>
+          <p class="guide-note">유료 AI 구독은 필수가 아닙니다. 무료 범위에서 실습하며, 필요한 유료 기능은 수업 중 별도로 안내합니다.</p>
+        </article>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq-wrap">
+        <div class="faq-head reveal">
+          <p class="section-label"><span>Q</span> FAQ</p>
+          <h3>자주 묻는 질문</h3>
+        </div>
+        <div class="faq-list reveal" data-delay="1">
+          <details class="faq-item">
+            <summary>코딩을 전혀 몰라도 들을 수 있나요?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>네. 이 과정은 프로그래밍 문법을 가르치는 과정이 아닙니다. 6회차에서는 AI에게 HTML/CSS/JavaScript 구조를 설명하고 수정을 요청하는 방식으로 웹사이트를 만듭니다.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>AI 유료 결제가 꼭 필요한가요?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>필수가 아닙니다. 1회차부터 무료 수준의 기능을 중심으로 실습합니다. 이미 가입한 모델이 있으면 그것을, 없다면 Gemini를 중심으로 진행합니다.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>초급과 중급은 어떻게 나뉘나요?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>1–2회차는 AI·LLM·프롬프트와 파일 분석을 다루는 기초 구간, 3–5회차는 Agent와 Opencode·Egolite를 다루는 중급 구간, 6–8회차는 웹사이트·앱 제작과 배포를 다루는 실전 구간입니다.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>수업이 끝나면 무엇이 남나요?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>실제 URL로 접속 가능한 웹사이트, 개인 GitHub Repository, 앱 제작 실습 결과물, 그리고 4대 LLM·Agent·AI 코딩 도구를 다루는 경험이 남습니다.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>준비물이 부족하면 수강이 어렵나요?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>노트북과 Chrome 브라우저만 있으면 시작할 수 있습니다. Google 계정은 1회차 전에, GitHub 계정은 7회차 전까지 준비하면 됩니다.</p></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact" aria-labelledby="contactTitle">
+    <div class="container">
+      <div class="contact-card reveal">
+        <div class="contact-glow" aria-hidden="true"></div>
+        <div class="contact-copy">
+          <p class="section-label light"><span>06</span> CONTACT</p>
+          <h2 id="contactTitle">8회 뒤,<br><span class="grad-text">당신의 링크</span>가 인터넷에 남습니다.</h2>
+          <p>과정 일정, 수강 대상, 준비물에 대해 궁금한 점이 있다면 편하게 문의해 주세요.</p>
+          <div class="contact-actions">
+            <a href="mailto:ydbksm@gmail.com?subject=AI%20%EC%B4%88%EA%B8%89~%EC%A4%91%EA%B8%89%208%ED%9A%8C%20%EA%B3%BC%EC%A0%95%20%EB%AC%B8%EC%9D%98" class="btn btn-primary">
+              이메일로 문의하기
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@AIedunexus" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">유튜브 채널</a>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="contact-key">연락처</span>
+            <a class="contact-val" href="mailto:ydbksm@gmail.com">ydbksm@gmail.com</a>
+          </div>
+          <div class="contact-row">
+            <span class="contact-key">카카오톡 ID</span>
+            <span class="contact-val val-with-copy">
+              xneo
+              <button class="copy-btn" type="button" data-copy="xneo" aria-label="카카오톡 ID 복사">
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="7" y="7" width="9" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M13 7V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h1" stroke="currentColor" stroke-width="1.5"/></svg>
+              </button>
+            </span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-key">유튜브</span>
+            <a class="contact-val contact-url" href="https://www.youtube.com/@AIedunexus" target="_blank" rel="noopener noreferrer">https://www.youtube.com/@AIedunexus</a>
+          </div>
+          <div class="contact-badge">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            AI EDU NEXUS · 8 SESSION PROGRAM
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <a class="brand" href="#top" aria-label="AI EDU NEXUS 홈">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M6 24V8l10 8 10-8v16" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="brand-text">AI EDU <em>NEXUS</em></span>
+      </a>
+      <nav class="footer-nav" aria-label="푸터 메뉴">
+        <a href="#about">과정 소개</a>
+        <a href="#curriculum">커리큘럼</a>
+        <a href="#knowledge">AI 지식</a>
+        <a href="#guide">수강 안내</a>
+        <a href="#contact">문의</a>
+      </nav>
+    </div>
+
+    <div class="footer-contact" aria-label="연락처">
+      <p>연락처 : <a href="mailto:ydbksm@gmail.com">ydbksm@gmail.com</a></p>
+      <p>카카오톡 ID : <span class="footer-kakao">xneo</span></p>
+      <p>유튜브 : <a href="https://www.youtube.com/@AIedunexus" target="_blank" rel="noopener noreferrer">https://www.youtube.com/@AIedunexus</a></p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 AI EDU NEXUS. AI 초급~중급 8회 교육 과정.</p>
+      <a href="#top" class="back-top">맨 위로 <span aria-hidden="true">↑</span></a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">카카오톡 ID가 복사되었습니다.</div>
+
+<script src="script.js"></script>
+</body>
+</html>
