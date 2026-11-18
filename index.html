@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI EDU NEXUS | AI 왕초보를 8회 교육으로 중급 AI 사용자로~!</title>
+<meta name="description" content="AI 왕초보를 8회 교육으로 중급 AI 사용자로~! 4대 LLM 분석부터 무료 실습, 엑셀·파일 자동화, Opencode 에이전트 실습까지.">
+<meta name="theme-color" content="#3D3926">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%233D3926'/%3E%3Cpath d='M17 43V21l15 12 15-12v22' stroke='%23DAD4CA' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<span id="top" class="top-anchor" aria-hidden="true"></span>
+<a class="skip-link" href="#main">본문 바로가기</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">A</span>
+      <span class="brand-text">AI EDU <strong>NEXUS</strong></span>
+    </a>
+    <nav class="desktop-nav" aria-label="주요 메뉴">
+      <a href="#course">과정 소개</a>
+      <a href="#curriculum">8회 커리큘럼</a>
+      <a href="#glossary">AI 단어집</a>
+      <a href="#contact">교육문의</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="모바일 메뉴 열기" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="모바일 메뉴" hidden>
+    <a href="#course">과정 소개</a>
+    <a href="#curriculum">8회 커리큘럼</a>
+    <a href="#glossary">AI 단어집</a>
+    <a href="#contact">교육문의</a>
+  </nav>
+</header>
+
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> 8회 실전 AI 교육 과정</p>
+        <h1 id="hero-title">AI 왕초보를 <em>8회 교육</em>으로<br>중급 AI 사용자로~!</h1>
+        <p class="hero-desc">4대 LLM을 직접 비교하고, 무료 요금제로 실습하고, 엑셀·파일 업로드·배치 자동화를 거쳐 Opencode 에이전트로 웹사이트까지 만듭니다. 질문하는 법부터 만들고 배포하는 법까지 한 번에.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#curriculum">8회 일정 보기 <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-outline" href="#glossary">AI 단어집 열기</a>
+        </div>
+        <ul class="hero-facts" aria-label="과정 핵심 수치">
+          <li><strong>8</strong><span>회차 실전 과정</span></li>
+          <li><strong>4</strong><span>대 LLM 비교·실습</span></li>
+          <li><strong>17</strong><span>개 용어 분류</span></li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-frame">
+          <span class="art-tag art-tag-1">Gemini</span>
+          <span class="art-tag art-tag-2">ChatGPT</span>
+          <span class="art-tag art-tag-3">Claude</span>
+          <span class="art-tag art-tag-4">Grok</span>
+          <div class="art-core">
+            <span>AI</span>
+            <small>초급 → 중급</small>
+          </div>
+          <svg class="art-line" viewBox="0 0 320 320" fill="none" aria-hidden="true">
+            <circle cx="160" cy="160" r="118" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8"/>
+            <circle cx="160" cy="160" r="82" stroke="currentColor" stroke-width="1" opacity=".6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSE INTRO -->
+  <section class="section intro-section" id="course" aria-labelledby="course-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-kicker">COURSE OVERVIEW</p>
+        <h2 id="course-title">이해하고, 눌러보고, 자동화하고, 만듭니다.</h2>
+        <p class="section-lead">이론은 최소화하고 화면에서 직접 해보는 시간을 중심으로 구성했습니다. 각 회차는 이전 회차의 결과물을 그다음 실습의 재료로 사용합니다.</p>
+      </div>
+      <ol class="journey">
+        <li class="journey-card reveal">
+          <span class="journey-num">01</span>
+          <h3>비교하기</h3>
+          <p>4대 LLM의 기술적 장단점과 공인 벤치마크를 읽고, 내 작업에 맞는 모델을 고르는 기준을 세웁니다.</p>
+          <span class="journey-tag">1회</span>
+        </li>
+        <li class="journey-card reveal">
+          <span class="journey-num">02</span>
+          <h3>프롬프트로 실습하기</h3>
+          <p>무료 요금제에서 문서·유튜브·번역·엑셀 분석을 해보고, 15가지 프롬프트 원칙을 내 질문에 적용합니다.</p>
+          <span class="journey-tag">2~3회</span>
+        </li>
+        <li class="journey-card reveal">
+          <span class="journey-num">03</span>
+          <h3>PC에서 자동화하기</h3>
+          <p>업로드 한계를 확인하고, LLM이 직접 할 수 없는 로컬 작업을 배치 파일과 에이전트로 해결합니다.</p>
+          <span class="journey-tag">4~5회</span>
+        </li>
+        <li class="journey-card reveal">
+          <span class="journey-num">04</span>
+          <h3>웹으로 완성하기</h3>
+          <p>Opencode로 웹사이트를 만들고 GitHub 저장소까지 생성한 뒤, 여러 모델로 결과물을 비교합니다.</p>
+          <span class="journey-tag">6~8회</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section class="section curriculum-section" id="curriculum" aria-labelledby="curriculum-title">
+    <div class="container">
+      <div class="section-head head-with-action">
+        <div>
+          <p class="section-kicker">8-SESSION CURRICULUM</p>
+          <h2 id="curriculum-title">8회 커리큘럼</h2>
+          <p class="section-lead">각 회차를 누르면 상세 실습 내용이 펼쳐집니다.</p>
+        </div>
+        <button class="btn btn-outline btn-sm" id="toggleAll" type="button" aria-expanded="false">전체 펼치기</button>
+      </div>
+
+      <div class="session-list">
+
+        <!-- 1회 -->
+        <details class="session reveal" id="session-1">
+          <summary>
+            <span class="session-num">01</span>
+            <span class="session-title-wrap">
+              <span class="session-kicker">SESSION 01 · 분석</span>
+              <span class="session-title">현재 시장 4대장 LLM 분석</span>
+              <span class="session-desc">Gemini · ChatGPT · Claude · Grok의 기술적 장단점, 공인 벤치마크, 에이전트 구조까지</span>
+            </span>
+            <span class="session-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="session-body">
+            <div class="block">
+              <h3>4대 LLM 기술적 장단점</h3>
+              <div class="model-grid">
+                <article class="model-card">
+                  <p class="model-vendor">Google DeepMind</p>
+                  <h4>Gemini</h4>
+                  <p class="model-label">장점</p>
+                  <p>설계 초기부터 텍스트·비디오·오디오를 동시에 처리하는 네이티브 멀티모달 구조. 문맥 기억 용량이 100만~200만 토큰 이상으로 업계 최대 수준이며, 구글 검색과 결합해 사실성 검증 능력이 뛰어납니다.</p>
+                  <p class="model-label">단점</p>
+                  <p>안전성 필터가 엄격해 보안 테스트나 역사적 질의에서도 답변을 거부하는 경우가 있습니다. 복잡하게 중첩된 지시에서 세부 조건을 누락할 수 있습니다.</p>
+                </article>
+                <article class="model-card">
+                  <p class="model-vendor">OpenAI</p>
+                  <h4>ChatGPT <small>(GPT 계열)</small></h4>
+                  <p class="model-label">장점</p>
+                  <p>연쇄 추론과 강화학습을 통해 기호 수학·과학 논리·코드 디버깅에서 스스로 오류를 점검합니다. 구조화된 JSON 출력, 파이썬 실행기 등 외부 도구 연동과 개발자 API 생태계가 가장 성숙합니다.</p>
+                  <p class="model-label">단점</p>
+                  <p>깊은 추론 작업은 생성 전 생각하는 시간이 길고 토큰 소모와 비용이 큽니다. 긴 문서에서 중간 부분의 세부 정보를 놓치는 현상이 상대적으로 관찰됩니다.</p>
+                </article>
+                <article class="model-card">
+                  <p class="model-vendor">Anthropic</p>
+                  <h4>Claude <small>(클로드 계열)</small></h4>
+                  <p class="model-label">장점</p>
+                  <p>실제 깃허브 버그를 해결하는 SWE-bench에서 최상위 성능을 보입니다. 모르는 정보를 지어내지 않고 한계를 명확히 짚는 환각 방지 조율이 엄격하며, 자연스러운 문장 작성 능력이 뛰어납니다.</p>
+                  <p class="model-label">단점</p>
+                  <p>입력 문맥 창이 통상 20만 토큰 수준으로 제미나이의 초대용량 처리에 비해 물리적 한계가 있습니다. 실시간 비디오·음성 네이티브 처리도 텍스트·이미지 대비 제약이 있습니다.</p>
+                </article>
+                <article class="model-card">
+                  <p class="model-vendor">xAI</p>
+                  <h4>Grok <small>(그록 계열)</small></h4>
+                  <p class="model-label">장점</p>
+                  <p>X(구 트위터)의 실시간 소셜 데이터와 직접 연동되어 웹 인덱싱 전 초단위 글로벌 속보와 최신 반응 파악에 유리합니다. 응답 속도가 빠르고 민감한 주제도 회피하지 않고 직설적으로 다룹니다.</p>
+                  <p class="model-label">단점</p>
+                  <p>미검증 루머나 정제되지 않은 데이터가 반영되어 사실성 검증·출처 정확도에서 오류율이 높습니다. 기업용 보안 통제와 조직 관리 기능 등 비즈니스 API 인프라가 상대적으로 부족합니다.</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="block">
+              <h3>주요 공인 벤치마크 측정 방식과 점수</h3>
+              <div class="bench-grid">
+                <article class="bench-card">
+                  <div class="bench-head"><span class="bench-icon">SWE</span><h4>SWE-bench</h4></div>
+                  <p class="bench-sub">소프트웨어 엔지니어링 실무 능력</p>
+                  <p>실제 오픈소스 저장소의 버그 리포트를 주고, 생성한 코드 패치를 가상 환경에 적용해 유닛 테스트 통과 여부를 이진 판정으로 검증합니다.</p>
+                  <ul class="score-list">
+                    <li><span>클로드</span><div class="bar"><i style="width:100%"></i></div><b>약 79.2~88.6% 이상</b></li>
+                    <li><span>챗지피티</span><div class="bar"><i style="width:88%"></i></div><b>약 74.4~80.0%</b></li>
+                    <li><span>제미나이</span><div class="bar"><i style="width:89%"></i></div><b>약 76.2~80.6%</b></li>
+                    <li><span>그록</span><div class="bar"><i style="width:79%"></i></div><b>약 71.4~72.2%</b></li>
+                  </ul>
+                </article>
+                <article class="bench-card">
+                  <div class="bench-head"><span class="bench-icon">FACTS</span><h4>Factual Consistency</h4></div>
+                  <p class="bench-sub">사실성 및 환각 억제율</p>
+                  <p>출력한 각 문장이 원천 데이터와 논리적으로 일치하는지 모순되는지 검증해 사실 일치 비율을 정량화합니다.</p>
+                  <ul class="score-list">
+                    <li><span>제미나이</span><div class="bar"><i style="width:100%"></i></div><b>0.89~0.90</b></li>
+                    <li><span>그록</span><div class="bar"><i style="width:100%"></i></div><b>0.89~0.90</b></li>
+                    <li><span>클로드</span><div class="bar"><i style="width:98%"></i></div><b>0.88~0.89</b></li>
+                    <li><span>챗지피티</span><div class="bar"><i style="width:97%"></i></div><b>0.87~0.88</b></li>
+                  </ul>
+                </article>
+                <article class="bench-card">
+                  <div class="bench-head"><span class="bench-icon">GPQA</span><h4>GPQA Diamond</h4></div>
+                  <p class="bench-sub">박사급 수리 및 과학 추론</p>
+                  <p>생물·물리·화학 등 전문가들이 구글 검색으로도 바로 풀지 못하도록 설계한 고난도 다단계 추론 문제입니다.</p>
+                  <ul class="score-list">
+                    <li><span>챗지피티</span><div class="bar"><i style="width:100%"></i></div><b>약 78~86% 이상</b></li>
+                    <li><span>클로드</span><div class="bar"><i style="width:95%"></i></div><b>약 75~84%</b></li>
+                    <li><span>제미나이</span><div class="bar"><i style="width:89%"></i></div><b>약 72~79%</b></li>
+                    <li><span>그록</span><div class="bar"><i style="width:83%"></i></div><b>약 68~75%</b></li>
+                  </ul>
+                </article>
+                <article class="bench-card">
+                  <div class="bench-head"><span class="bench-icon">ELO</span><h4>LMSYS Chatbot Arena</h4></div>
+                  <p class="bench-sub">인간 블라인드 선호도 Elo 레이팅</p>
+                  <p>익명의 두 모델이 같은 질문에 답하고, 전 세계 사용자가 블라인드 투표한 결과를 체스 레이팅 방식으로 환산합니다.</p>
+                  <ul class="score-list">
+                    <li><span>클로드</span><div class="bar"><i style="width:100%"></i></div><b>약 1,503점</b></li>
+                    <li><span>그록</span><div class="bar"><i style="width:99%"></i></div><b>약 1,495점</b></li>
+                    <li><span>제미나이</span><div class="bar"><i style="width:99%"></i></div><b>약 1,494점</b></li>
+                    <li><span>챗지피티</span><div class="bar"><i style="width:98%"></i></div><b>약 1,481점</b></li>
+                  </ul>
+                </article>
+              </div>
+              <p class="note">※ 수치는 자료에 기재된 범위를 그대로 옮긴 것으로, 모델 업데이트에 따라 달라질 수 있습니다.</p>
+            </div>
+
+            <div class="block">
+              <h3>LLM-Agent 개념 정리</h3>
+              <p class="block-intro">4대 기업 모두 <strong>로컬 PC 에이전트</strong>와 <strong>클라우드 에이전트</strong> 두 라인업을 출시하고 있습니다. 전자는 내 PC가 켜져 있을 때 파일·터미널을 직접 제어하고, 후자는 PC를 꺼도 클라우드에서 장시간 작업을 이어갑니다.</p>
+              <div class="table-wrap">
+                <table>
+                  <caption>4대 기업 에이전트 솔루션 구분</caption>
+                  <thead><tr><th scope="col">기업</th><th scope="col">로컬 PC 에이전트</th><th scope="col">클라우드 에이전트</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">xAI Grok</th><td>Build — 터미널 코딩 CLI</td><td>Grok Bot — 클라우드 가상 PC/비서</td></tr>
+                    <tr><th scope="row">OpenAI</th><td>Codex CLI — 터미널 코딩 CLI</td><td>Deep Research / Operator — 클라우드 리서치·브라우징</td></tr>
+                    <tr><th scope="row">Anthropic</th><td>Claude Code — 터미널 코딩 CLI</td><td>Claude Coworker / Agent SDK — 업무 비서·백엔드 자동화</td></tr>
+                    <tr><th scope="row">Google</th><td>Antigravity CLI — 터미널 코딩 CLI</td><td>Antigravity 2.0 / Gemini Spark — 구글 클라우드 기반 연동</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="agent-notes">
+                <p><strong>Claude Code</strong> — 프로젝트의 CLAUDE.md 규칙을 먼저 읽고, Plan Mode로 사전 계획을 승인받은 뒤 MCP로 로컬 DB·Slack·Jira·Notion까지 연결합니다.</p>
+                <p><strong>Codex CLI</strong> — Read-only / Auto / Full Access 권한 단계 안에서만 작업하고, 내장 코드 리뷰로 변경 전후 차이를 점검합니다.</p>
+                <p><strong>Grok Build</strong> — 최대 8개 서브에이전트를 병렬로 띄워 같은 문제를 서로 다른 방식으로 해결하고 테스트를 가장 빨리 통과한 코드를 채택합니다.</p>
+                <p><strong>Antigravity CLI</strong> — 로컬 서버를 띄운 뒤 브라우저를 직접 열어 화면을 시각적으로 확인하고, 백그라운드 리서치와 메인 작업을 나눠 실행합니다.</p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 2회 -->
+        <details class="session reveal" id="session-2">
+          <summary>
+            <span class="session-num">02</span>
+            <span class="session-title-wrap">
+              <span class="session-kicker">SESSION 02 · 무료 실습 (1)</span>
+              <span class="session-title">LLM 4대장 실제로 사용해 보기 (1)</span>
+              <span class="session-desc">유료 서비스가 아닌 무료 상태에서 최대한 활용하는 기능과 프롬프트 작성 실습</span>
+            </span>
+            <span class="session-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="session-body">
+            <div class="block">
+              <h3>이 회차에서 해보는 일</h3>
+              <ul class="check-list">
+                <li>4대 LLM의 무료 요금제에서 같은 질문을 던지고 답변 방식의 차이 비교하기</li>
+                <li>다양한 프롬프트를 작성하고 결과를 눌러보며 지시문의 influence 확인하기</li>
+                <li>문서 파일 분석, 유튜브 동영상 분석, 문서 및 동영상 번역 실습하기</li>
+              </ul>
+            </div>
+            <div class="block">
+              <h3>실습에 사용하는 프롬프트 15원칙 <span class="count-badge">15</span></h3>
+              <p class="block-intro">아래 원칙을 한 장의 시스템 프롬프트로 묶어 4대 모델에 각각 넣고, 답변이 어떻게 달라지는지 비교합니다.</p>
+              <ol class="prompt-grid">
+                <li><b>01</b><strong>답변부터 먼저</strong><span>결론을 먼저 말하고 필요한 근거와 설명을 뒤에 붙입니다.</span></li>
+                <li><b>02</b><strong>모르면 추측 금지</strong><span>확실하지 않은 정보는 단정하지 말고 확인된 사실과 추정을 구분합니다.</span></li>
+                <li><b>03</b><strong>최신 정보는 확인</strong><span>가격·정책·뉴스·제품은 가능한 최신 정보를 확인해 답합니다.</span></li>
+                <li><b>04</b><strong>무조건 동의 금지</strong><span>논리적 허점이나 더 나은 선택지가 있으면 적극적으로 지적합니다.</span></li>
+                <li><b>05</b><strong>선택지는 비교해서</strong><span>장단점과 비용·효과를 비교하고 마지막에 추천안을 하나 고릅니다.</span></li>
+                <li><b>06</b><strong>숫자로 설명</strong><span>금액·비율·기간·확률 등으로 구체화합니다.</span></li>
+                <li><b>07</b><strong>쉽게 설명해줘</strong><span>처음 나오는 전문용어는 일반인도 이해할 수 있게 풀어줍니다.</span></li>
+                <li><b>08</b><strong>구조화해서 정리</strong><span>핵심 요약 → 세부 내용 → 실행할 일 순서로 정리합니다.</span></li>
+                <li><b>09</b><strong>추가 질문 먼저</strong><span>중요한 정보가 빠졌으면 임의로 가정하지 않고 질문부터 합니다.</span></li>
+                <li><b>10</b><strong>반대 의견도 검토</strong><span>찬성 논리뿐 아니라 실패 이유와 반대 관점도 함께 봅니다.</span></li>
+                <li><b>11</b><strong>실행 가능하게</strong><span>바로 실행할 수 있는 구체적인 다음 행동까지 만듭니다.</span></li>
+                <li><b>12</b><strong>예시까지 보여줘</strong><span>새 개념은 실제 상황을 가정한 구체적 예시와 함께 설명합니다.</span></li>
+                <li><b>13</b><strong>내 조건을 우선</strong><span>일반적인 정답보다 목표·예산·시간·상황 조건을 우선합니다.</span></li>
+                <li><b>14</b><strong>틀린 전제는 지적</strong><span>질문 자체의 사실 오류가 있으면 답하기 전에 먼저 바로잡습니다.</span></li>
+                <li><b>15</b><strong>마지막에 검토</strong><span>빠진 조건·계산 오류·논리적 모순이 없는지 한 번 더 검토합니다.</span></li>
+              </ol>
+            </div>
+          </div>
+        </details>
+
+        <!-- 3회 -->
+        <details class="session reveal" id="session-3">
+          <summary>
+            <span class="session-num">03</span>
+            <span class="session-title-wrap">
+              <span class="session-kicker">SESSION 03 · 무료 실습 (2)</span>
+              <span class="session-title">LLM 4대장 실제로 사용해 보기 (2)</span>
+              <span class="session-desc">엑셀 파일 사례 실습 — 파일 구조를 읽고 요청한 작업을 얼마나 잘 수행하는지 비교</span>
+            </span>
+            <span class="session-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="session-body">
+            <div class="block">
+              <h3>실습 방식</h3>
+              <p class="block-intro">엑셀 파일을 그대로 올리기 전에 <strong>열 구조와 데이터 성격을 먼저 읽도록</strong> 요청합니다. 그다음 조건에 맞는 값 찾기, 중복 데이터 추출 같은 실제 업무 질문을 던지고 모델별 결과를 채점합니다.</p>
+              <div class="case-grid">
+                <article class="case-card">
+                  <span class="case-label">사례 A</span>
+                  <h4>두 개 이상의 조건에 일치하는 값 찾기</h4>
+                  <p>펀드코드·펀드명·판매사명·설정액·세부유형으로 구성된 1,097행 데이터에서 여러 조건을 동시에 만족하는 행을 찾습니다. "세부유형이 채권형이면서 설정액이 50억 이상인 펀드"처럼 조건을 겹쳐 요청하고, 조건 누락 여부를 확인합니다.</p>
+                  <div class="columns"><span>펀드코드</span><span>펀드명</span><span>판매사명</span><span>설정액</span><span>세부유형</span></div>
+                </article>
+                <article class="case-card">
+                  <span class="case-label">사례 B</span>
+                  <h4>중복 데이터 추출하기</h4>
+                  <p>방과 후 수업 신청 명단에서 같은 학생이 여러 과목을 신청한 중복 건을 찾습니다. 과목별 시트(국어·수학·영어·과학)와 학생별 수강 현황 매트릭스를 함께 올려 "총 신청 건수 87건, 고유 학생 76명" 같은 요약을 검증합니다.</p>
+                  <div class="columns"><span>학번</span><span>이름</span><span>과목</span><span>연락처</span><span>신청과목수</span></div>
+                </article>
+              </div>
+              <p class="note">※ 화면에는 열 구조와 집계 수치만 정리했습니다. 실습 파일의 개인 연락처 등 원본 데이터는 그대로 노출하지 않습니다.</p>
+            </div>
+            <div class="block">
+              <h3>비교 관점</h3>
+              <ul class="check-list">
+                <li>표의 열을 제대로 인식했는가? (시트 구분, 헤더 행 위치, 숫자 서식)</li>
+                <li>조건을 모두 반영했는가? (누락·과잉 조건 없이)</li>
+                <li>계산 결과와 근거 행을 함께 제시했는가?</li>
+                <li>같은 질문을 4대 모델에 넣었을 때 결과 차이가 무엇이었는가?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- 4회 -->
+        <details class="session reveal" id="session-4">
+          <summary>
+            <span class="session-num">04</span>
+            <span class="session-title-wrap">
+              <span class="session-kicker">SESSION 04 · 무료 실습 (3)</span>
+              <span class="session-title">LLM 4대장 실제로 사용해 보기 (3)</span>
+              <span class="session-desc">무료 버전 파일 업로드 작동 상황 + 로컬 PC에서 batch 명령으로 자동화하기</span>
+            </span>
+            <span class="session-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="session-body">
+            <div class="block">
+              <h3>무료 버전 파일 업로드 한계</h3>
+              <div class="limit-grid">
+                <div class="limit-card"><span>문서·코드·압축·이미지</span><strong>파일당 최대 100MB</strong></div>
+                <div class="limit-card"><span>동영상</span><strong>파일당 최대 2GB</strong></div>
+                <div class="limit-card"><span>한 번에 첨부</span><strong>최대 10개 파일</strong></div>
+                <div class="limit-card"><span>무료 플랜 재생 시간</span><strong>영상 5분 / 오디오 10분</strong></div>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <caption>업로드 지원 파일 형식과 활용 방법</caption>
+                  <thead><tr><th scope="col">분류</th><th scope="col">지원 형식</th><th scope="col">주요 활용</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">문서 / 데이터</th><td>PDF, DOCX, TXT, RTF, CSV, XLSX, PPTX</td><td>보고서 요약, 엑셀 데이터 분석, 번역</td></tr>
+                    <tr><th scope="row">코드</th><td>PY, JS, HTML, CSS, C++, Java, JSON</td><td>코드 리뷰, 버그 수정, 리팩토링</td></tr>
+                    <tr><th scope="row">압축 파일</th><td>ZIP (내부 파일 최대 10개 인식)</td><td>소스 코드 프로젝트 전체 분석</td></tr>
+                    <tr><th scope="row">이미지</th><td>JPG, PNG, WEBP, GIF</td><td>OCR, 객체 인식, 디자인 피드백</td></tr>
+                    <tr><th scope="row">음성 / 동영상</th><td>MP3, WAV, MP4, MOV</td><td>회의 녹음 정리, 영상 내용 요약</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="block-intro">최대 10개 파일을 동시에 올려 <strong>파일 간 교차 비교</strong>, 계약서 조항 대조, 소스 코드 전체 흐름 파악, 문서 기반 질의응답(RAG) 같은 복합 요청을 해봅니다.</p>
+            </div>
+            <div class="block">
+              <h3>웹으로는 안 되는 일 → 배치 파일로</h3>
+              <p class="block-intro">사용자 PC 안에서 자동화해야 하는 작업은 웹 상태로는 수행할 수 없습니다. 이때 LLM에게 "내 PC에서 실행 가능한 배치 파일 코드를 작성해줘"라고 요청합니다.</p>
+              <ol class="batch-list">
+                <li><b>01_project_init.bat</b><span>프로젝트 표준 폴더 구조와 README·index.html 기본 파일 자동 생성</span></li>
+                <li><b>02_auto_organize.bat</b><span>흩어진 파일을 확장자별로 사진·문서·압축파일·실행파일 폴더로 자동 분류</span></li>
+                <li><b>03_auto_backup.bat</b><span>타임스탬프(YYYYMMDD_HHMMSS)가 붙은 폴더로 자동 백업</span></li>
+                <li><b>04_batch_rename.bat</b><span>이미지 파일에 접두사와 일련번호(001, 002…)를 붙여 일괄 이름 변경</span></li>
+                <li><b>05_dev_startup.bat</b><span>자주 쓰는 웹사이트·메모장·터미널을 한 번에 실행</span></li>
+                <li><b>06_temp_cleaner.bat</b><span>사용자 Temp와 시스템 Temp 폴더의 임시 파일 정리</span></li>
+                <li><b>엑셀 10개 자동 생성</b><span>파워셸을 호출해 양식이 포함된 엑셀 파일 10개를 한 번에 생성</span></li>
+              </ol>
+              <p class="block-intro">반복 실행이 필요하면 <strong>하루 한 번은 작업 스케줄러</strong>, 짧은 주기 반복은 배치 파일 안의 <code>timeout</code> 루프 또는 스케줄러의 반복 간격 설정을 사용합니다.</p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 5회 -->
+        <details class="session reveal" id="session-5">
+          <summary>
+            <span class="session-num">05</span>
+            <span class="session-title-wrap">
+              <span class="session-kicker">SESSION 05 · 에이전트 실습 (1)</span>
+              <span class="session-title">Agent 실습 (1) — Opencode 설치와 로컬 기능</span>
+              <span class="session-desc">내 PC의 파일·터미널을 직접 다루는 에이전트를 설치하고 기본 기능을 익힙니다.</span>
+            </span>
+            <span class="session-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="session-body">
+            <div class="block">
+              <h3>실습 흐름</h3>
+              <ol class="step-list">
+                <li><b>설치</b><span>Opencode를 설치하고 터미널에서 실행합니다.</span></li>
+                <li><b>권한 확인</b><span>읽기 전용 / 자동 실행 / 전체 자율 등 허용 범위를 먼저 설정합니다.</span></li>
+                <li><b>로컬 기능 실습</b><span>프로젝트 폴더 읽기, 파일 수정, 터미널 명령 실행, 테스트까지 요청합니다.</span></li>
+                <li><b>결과 확인</b><span>에이전트가 바꾼 파일과 명령어 로그를 직접 검토합니다.</span></li>
+              </ol>
+              <div class="callout">
+                <strong>로컬 에이전트의 특징</strong>
+                <p>내 컴퓨터의 코드 폴더를 직접 읽고 파일을 수정하며 터미널 명령을 실행합니다. 내 PC가 켜져 있을 때 동작하고, 노트북을 닫으면 실행이 멈춥니다. 개발이나 로컬 파일 보안이 중요한 작업에 적합합니다.</p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 6회 -->
+        <details class="session reveal" id="session-6">
+          <summary>
+            <span class="session-num">06</span>
+            <span class="session-title-wrap">
+              <span class="session-kicker">SESSION 06 · 에이전트 실습 (2)</span>
+              <span class="session-title">Agent 실습 (2) — 웹(앱)사이트 제작 + GitHub</span>
+              <span class="session-desc">Opencode로 사이트를 만들고, GitHub 계정과 Repository까지 생성합니다.</span>
+            </span>
+            <span class="session-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="session-body">
+            <div class="block">
+              <h3>실습 흐름</h3>
+              <ol class="step-list">
+                <li><b>사이트 기획</b><span>원하는 화면과 섹션을 글로 정의하고 에이전트에게 전달합니다.</span></li>
+                <li><b>제작</b><span>Opencode로 HTML·CSS·JavaScript 파일을 생성하고 로컬에서 확인합니다.</span></li>
+                <li><b>수정 요청</b><span>색감·문구·반응형 등 변경 사항을 대화로 반영합니다.</span></li>
+                <li><b>GitHub</b><span>계정 생성 → 새 Repository 생성 → 파일 업로드까지 진행합니다.</span></li>
+              </ol>
+              <div class="callout callout-soft">
+                <strong>배운 개념 연결</strong>
+                <p>4회에서 만든 배치 파일로 폴더 구조를 잡고, 5회에서 익힌 로컬 에이전트로 코드를 작성한 뒤, 6회에서 그 결과물을 GitHub에 올립니다.</p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 7회 -->
+        <details class="session reveal" id="session-7">
+          <summary>
+            <span class="session-num">07</span>
+            <span class="session-title-wrap">
+              <span class="session-kicker">SESSION 07 · 에이전트 실습 (3)</span>
+              <span class="session-title">Agent 실습 (3) — 다양한 모델로 웹(앱)사이트 제작</span>
+              <span class="session-desc">같은 목표를 여러 모델·에이전트에 맡겨 결과물과 작업 방식을 비교합니다.</span>
+            </span>
+            <span class="session-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="session-body">
+            <div class="block">
+              <h3>비교 포인트</h3>
+              <ul class="check-list">
+                <li>같은 요청을 Claude Code, Codex CLI, Grok Build, Antigravity CLI에 각각 전달하기</li>
+                <li>사전 계획(Plan Mode), 권한 승인 단계, 병렬 서브에이전트, 브라우저 확인 등 작업 방식의 차이 관찰하기</li>
+                <li>완성된 화면의 completeness, 코드 구조, 수정 용이성 비교하기</li>
+                <li>어떤 모델이 어떤 유형의 작업에 유리했는지 정리하기</li>
+              </ul>
+              <p class="block-intro">1회에서 본 벤치마크 수치와 실제 체감 결과가 어떻게 다른지도 함께 돌아봅니다.</p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 8회 -->
+        <details class="session reveal" id="session-8">
+          <summary>
+            <span class="session-num">08</span>
+            <span class="session-title-wrap">
+              <span class="session-kicker">SESSION 08 · 마무리</span>
+              <span class="session-title">총복습</span>
+              <span class="session-desc">1회~7회까지 배운 내용을 정리하고 수강생 질문에 답합니다.</span>
+            </span>
+            <span class="session-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="session-body">
+            <div class="block">
+              <h3>복습 범위</h3>
+              <div class="review-grid">
+                <div><b>1~2회</b><span>4대 LLM 비교, 벤치마크, 프롬프트 15원칙</span></div>
+                <div><b>3~4회</b><span>엑셀 분석, 파일 업로드 한계, 배치 자동화</span></div>
+                <div><b>5~6회</b><span>Opencode 로컬 실습, 웹사이트 제작, GitHub 업로드</span></div>
+                <div><b>7회</b><span>다양한 모델·에이전트 비교 실습</span></div>
+              </div>
+              <div class="callout">
+                <strong>질문 세션</strong>
+                <p>수강생이 실습 중 겪은 오류와 궁금한 점을 가져와 함께 해결합니다. 이후 각자 작업에 맞는 모델과 에이전트를 고르는 기준을 정리하며 마무리합니다.</p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOSSARY -->
+  <section class="section glossary-section" id="glossary" aria-labelledby="glossary-title">
+    <div class="container">
+      <div class="section-head head-with-action">
+        <div>
+          <p class="section-kicker">AI GLOSSARY</p>
+          <h2 id="glossary-title">AI 단어집</h2>
+          <p class="section-lead">AI단어집.pdf의 17개 분류를 그대로 옮겼습니다. 버튼을 누르면 해당 내용이 펼쳐지고, 다시 누르면 접힙니다.</p>
+        </div>
+        <label class="glossary-search">
+          <span class="sr-only">용어 검색</span>
+          <input type="search" id="glossarySearch" placeholder="용어 검색 (예: RAG, MCP)" autocomplete="off">
+        </label>
+      </div>
+      <p class="glossary-status" id="glossaryStatus" aria-live="polite"></p>
+      <div class="glossary-list" id="glossaryList"></div>
+      <p class="note glossary-source">출처: AI단어집.pdf — 총 <span id="termTotal">0</span>개 용어, 17개 분류</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-inner">
+      <div>
+        <p class="section-kicker">CONTACT</p>
+        <h2 id="contact-title">교육문의</h2>
+        <p class="contact-lead"> 과정 구성, 실습 환경, 수강 신청 관련 문의는 아래로 연락해 주세요.</p>
+      </div>
+      <div class="contact-card">
+        <button class="copy-btn" id="copyEmail" type="button">이메일 복사</button>
+        <p class="contact-line">연락처 : <a href="mailto:ydbksm@gmail.com">ydbksm@gmail.com</a></p>
+        <p class="contact-line">카카오ID : <strong>xneo</strong></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="footer-brand" href="#top">AI EDU <strong>NEXUS</strong></a>
+      <p>AI 왕초보를 8회 교육으로 중급 AI 사용자로~!</p>
+    </div>
+    <div class="footer-contact">
+      <p>연락처 : <a href="mailto:ydbksm@gmail.com">ydbksm@gmail.com</a></p>
+      <p>카카오ID : xneo</p>
+    </div>
+    <a class="to-top" href="#top">맨 위로 ↑</a>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 AI EDU NEXUS</span><span>8회 실전 AI 교육 과정</span></div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
